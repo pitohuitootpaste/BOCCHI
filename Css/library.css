@@ -1,0 +1,132 @@
+.playlist_section, .artist_section {
+  text-align: left;
+  margin: -20px 190px;
+  width: 1560px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-header h2 {
+  font-size: 37px;
+  margin-bottom: 10px;
+}
+
+.scroll-buttons {
+  display: flex;
+  margin-right: 20px;
+}
+
+.scroll-buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.scroll-buttons button:hover {
+  transform: scale(1.1);
+}
+
+.scroll-buttons img {
+  width: 30px;
+  height: 30px;
+}
+
+.scrollContainer a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* playlist row */
+#row1section .scrollContainer {
+  display: flex;
+  overflow-x: hidden;
+  padding-bottom: 10px;
+}
+
+#row1section .playlist_column {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12px;
+  margin-right: 12px;
+}
+
+#row1section .playlist-item{
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+  cursor: pointer;
+  width: 250px;
+  height: 300px;
+  border-radius: 9px;
+  margin-right: 25px;
+}
+
+#row1section .playlist-item:hover {
+  background: rgba(81, 41, 87, 0.4);
+}
+
+#row1section .playlist-item img {
+  width: 244px;
+  height: 244px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-left: 3px;
+  margin-top: 3px;
+}
+
+#row1section .playlist-title {
+  margin-top: 5px;
+  margin-left: 3px;
+  font-size: 20px;
+  color: #F4F4F4;
+}
+
+/* artist row */
+#row2section .scrollContainer {
+  display: flex;
+  overflow-x: hidden;
+  padding-bottom: 10px;
+}
+
+#row2section .artist_column {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12px;
+  margin-right: 12px;
+}
+
+#row2section .artist-item{
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+  cursor: pointer;
+  width: 250px;
+  height: 300px;
+  border-radius: 9px;
+  margin-right: 25px;
+}
+
+#row2section .artist-item:hover {
+  background: rgba(81, 41, 87, 0.4);
+}
+
+#row2section .artist-item img {
+  width: 244px;
+  height: 244px;
+  border-radius: 200px;
+  object-fit: cover;
+  margin-left: 3px;
+  margin-top: 3px;
+}
+
+#row2section .artist-title {
+  margin-top: 5px;
+  margin-left: 3px;
+  font-size: 20px;
+  color: #F4F4F4;
+}

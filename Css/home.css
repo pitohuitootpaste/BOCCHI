@@ -1,0 +1,128 @@
+.song-section {
+  text-align: left;
+  margin: -20px 190px;
+  width: 1560px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-header h2 {
+  font-size: 37px;
+  margin-bottom: 10px;
+}
+
+.scroll-buttons {
+  display: flex;
+  margin-right: 20px;
+}
+
+.scroll-buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.scroll-buttons button:hover {
+  transform: scale(1.1);
+}
+
+.scroll-buttons img {
+  width: 30px;
+  height: 30px;
+}
+
+/* horizontal container */
+#row1section .scrollContainer {
+  display: flex;
+  overflow-x: hidden;
+  padding-bottom: 10px;
+}
+
+#row1section .songColumn {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  margin-right: 12px;
+}
+
+#row1section .song-item {
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  cursor: pointer;
+  width: 359px;
+  border-radius: 9px;
+}
+
+#row1section .song-item:hover {
+  background: rgba(81, 41, 87, 0.4);
+}
+
+#row1section .song-item img {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+#row1section .song-title {
+  font-size: 17px;
+  color: #F4F4F4;
+}
+
+/*Vertical container */
+#row2section .scrollContainer,
+#row3section .scrollContainer {
+  display: flex;
+  overflow-x: hidden;
+  padding-bottom: 10px;
+}
+
+#row2section .songColumn,
+#row3section .songColumn {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12px;
+  margin-right: 12px;
+}
+
+#row2section .song-item,
+#row3section .song-item {
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+  cursor: pointer;
+  width: 250px;
+  height: 300px;
+  border-radius: 9px;
+  margin-right: 25px;
+}
+
+#row2section .song-item:hover,
+#row3section .song-item:hover {
+  background: rgba(81, 41, 87, 0.4);
+}
+
+#row2section .song-item img,
+#row3section .song-item img {
+  width: 244px;
+  height: 244px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-left: 3px;
+  margin-top: 3px;
+}
+
+#row2section .song-title,
+#row3section .song-title {
+  margin-top: 5px;
+  margin-left: 3px;
+  font-size: 20px;
+  color: #F4F4F4;
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<head>
+  <title>BOCCHI | Home</title>
+  <link rel="stylesheet" href="/Css/GeneralStyle.css">
+  <link rel="stylesheet" href="/songs/LibraryPage/codes/generalLibraryStyle.css">
+</head>
+<body>
+  <!--General Elements-->
+  <nav id="sideNav">
+    <ul id="ulSidenav">
+      <li>
+        <a href="/home.html">
+          <img src="/images/Home.png" alt="Home">
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="/explorer.html">
+          <img src="/images/Explore.png" alt="Explore">
+          <span>Explore</span>
+        </a>
+      </li>
+      <li>
+        <a href="/library.html" style="background-color: rgba(255, 255, 255, 0.15)">
+          <img src="/images/Library.png" alt="Library">
+          <span>Library</span>
+        </a>
+      </li>
+      <hr id="sidenavLine" style="width: 67%; margin-top: 25px;">
+      <li>
+        <a href="/Signin.html">
+          <img src="/images/User.png" alt="Account">
+          <span>Sign In</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="topbar">
+      <img src="/images/Menu.png" alt="Menu" id="menuBtn" onclick="toggleMenu()">
+      <a href="/home.html" style="text-decoration: none;">
+        <div class="logoContainer">
+          <img src="/images/logo.png" alt="Logo" class="logo">
+          <h1>BOCCHI</h1>
+        </div>
+      </a>
+      <div class="search-wrapper">
+        <img class="search-icon" src="/images/Search.png" alt="searchicon">
+        <input type="text" placeholder="Search...">
+      </div>
+      <a class="signinA" href="/Signin.html">Sign In</a>
+    </div>
+  </header>
+
+  <div class="musicbar">
+    <div class="music-info">
+      <img src="/images/NoMedia.png" alt="Album Art">
+      <span class="songname">No Media</span>
+    </div>
+
+    <div class="music-controls">
+      <div class="buttons">
+        <button><img src="/images/End.png" alt="prev"></button>
+        <button><img src="/images/Play.png" alt="pause/play"></button>
+        <button><img src="/images/Next.png" alt="next"></button>
+      </div>
+
+      <input type="range" class="progress-bar" min="0" max="100" value="0">
+    </div>
+
+    <div class="volume-control">
+      <button class="mute-btn">
+        <img src="/images/Speaker.png" alt="Mute">
+      </button>
+      <input type="range" min="0" max="100" value="50">
+    </div>
+  </div>
+  <!--====================-->
+
+  <!--Main-->
+  <main>
+    <audio id="player"></audio>
+
+    <section class="musiclist_section" id="musicListSection">
+        <div class="section-header">
+            <div class="title-block">
+                <h2>Lou's Playlist</h2>
+            </div>
+
+            <button class="playall-btn">
+                <img src="/images/Play.png" alt="">
+                Play All
+            </button>
+        </div>
+
+        <hr class="divider">
+        <div class="musiclist_column">
+            <div class="song-row">
+                <img src="/songs/LibraryPage/songs/playlist/Lou Playlist/Bawat Piyesa.jpg" alt="">
+                <div class="song-details">
+                  <span class="song-title">Bawat Piyesa</span>
+                  <span class="song-artist">Munimuni</span>
+                  <span class="song-views">1.1M views</span>
+                </div>
+            </div>
+            <div class="song-row">
+                <img src="/songs/LibraryPage/songs/playlist/Lou Playlist/Dominga.jpg" alt="">
+                <div class="song-details">
+                  <span class="song-title">Dominga</span>
+                  <span class="song-artist">La Mave</span>
+                  <span class="song-views">1.5M views</span>
+                </div>
+            </div>
+            <div class="song-row">
+                <img src="/songs/LibraryPage/songs/playlist/Lou Playlist/ERE.jpg" alt="">
+                <div class="song-details">
+                  <span class="song-title">ERE</span>
+                  <span class="song-artist">Juan Karlos</span>
+                  <span class="song-views">1.2M views</span>
+                </div>
+            </div>
+            <div class="song-row">
+                <img src="/songs/LibraryPage/songs/playlist/Lou Playlist/Espresso.jpg" alt="">
+                <div class="song-details">
+                  <span class="song-title">Espresso</span>
+                  <span class="song-artist">Sabrina Carpenter</span>
+                  <span class="song-views">1.78M views</span>
+                </div>
+            </div>
+            <div class="song-row">
+                <img src="/songs/LibraryPage/songs/playlist/Lou Playlist/Folded.jpg" alt="">
+                <div class="song-details">
+                  <span class="song-title">Folded</span>
+                  <span class="song-artist">kehlani</span>
+                  <span class="song-views">1.73M views</span>
+                </div>
+            </div>
+            <div class="song-row">
+                <img src="/songs/LibraryPage/songs/playlist/Lou Playlist/Gangsta Baby.jpg" alt="">
+                <div class="song-details">
+                  <span class="song-title">Gangsta Baby</span>
+                  <span class="song-artist">HELLMERRY, Baby G</span>
+                  <span class="song-views">1.9M views</span>
+                </div>
+            </div>
+            <div class="song-row">
+                <img src="/songs/LibraryPage/songs/playlist/Lou Playlist/Isip.jpg" alt="">
+                <div class="song-details">
+                  <span class="song-title">Isip</span>
+                  <span class="song-artist">Healy After Dark</span>
+                  <span class="song-views">1.33M views</span>
+                </div>
+            </div>
+            <div class="song-row">
+                <img src="/songs/LibraryPage/songs/playlist/Lou Playlist/Kanibalismo II.jpg" alt="">
+                <div class="song-details">
+                  <span class="song-title">Kanibalismo II</span>
+                  <span class="song-artist">fitterkarma</span>
+                  <span class="song-views">1.37M views</span>
+                </div>
+            </div>
+            <div class="song-row">
+                <img src="/songs/LibraryPage/songs/playlist/Lou Playlist/LUPAYPAY.jpg" alt="">
+                <div class="song-details">
+                  <span class="song-title">LUPAYPAY</span>
+                  <span class="song-artist">Haring Manggi</span>
+                  <span class="song-views">1.12M views</span>
+                </div>
+            </div>
+            <div class="song-row">
+                <img src="/songs/LibraryPage/songs/playlist/Lou Playlist/Maui Wowie.jpg" alt="">
+                <div class="song-details">
+                  <span class="song-title">Maui Wowie</span>
+                  <span class="song-artist">Kid Cudi</span>
+                  <span class="song-views">1.74M views</span>
+                </div>
+            </div>
+            <div class="song-row">
+                <img src="/songs/LibraryPage/songs/playlist/Lou Playlist/NOKIA.jpg" alt="">
+                <div class="song-details">
+                  <span class="song-title">NOKIA</span>
+                  <span class="song-artist">Drake</span>
+                  <span class="song-views">1.24M views</span>
+                </div>
+            </div>
+            <div class="song-row">
+                <img src="/songs/LibraryPage/songs/playlist/Lou Playlist/Pag-ibig.jpg" alt="">
+                <div class="song-details">
+                  <span class="song-title">Pag-ibig</span>
+                  <span class="song-artist">fitterkarma</span>
+                  <span class="song-views">1.2M views</span>
+                </div>
+            </div>
+            <div class="song-row">
+                <img src="/songs/LibraryPage/songs/playlist/Lou Playlist/SOFTIE.jpg" alt="">
+                <div class="song-details">
+                  <span class="song-title">SOFTIE</span>
+                  <span class="song-artist">WAIIAN</span>
+                  <span class="song-views">1M views</span>
+                </div>
+            </div>
+            <div class="song-row">
+                <img src="/songs/LibraryPage/songs/playlist/Lou Playlist/Walang Humpay.jpg" alt="">
+                <div class="song-details">
+                  <span class="song-title">Walang Humpay</span>
+                  <span class="song-artist">12th Street</span>
+                  <span class="song-views">1.98M views</span>
+                </div>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <!--====================-->
+
+  <script src="/JavaScript/GeneralScript.js"></script>
+  <script src="/songs/LibraryPage/codes/generalLibraryJS.js"></script>
+</body>
+</html>

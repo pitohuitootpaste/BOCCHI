@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<head>
+  <title>BOCCHI | Home</title>
+  <link rel="stylesheet" href="Css/GeneralStyle.css">
+  <link rel="stylesheet" href="Css/explore.css">
+</head>
+<body>
+  <!--General Elements-->
+  <nav id="sideNav">
+    <ul id="ulSidenav">
+      <li>
+        <a href="home.html">
+          <img src="images/Home.png" alt="Home">
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="explorer.html" style="background-color: rgba(255, 255, 255, 0.15)">
+          <img src="images/Explore.png" alt="Explore">
+          <span>Explore</span>
+        </a>
+      </li>
+      <li>
+        <a href="library.html">
+          <img src="images/Library.png" alt="Library">
+          <span>Library</span>
+        </a>
+      </li>
+      <hr id="sidenavLine" style="width: 67%; margin-top: 25px;">
+      <li>
+        <a href="Signin.html">
+          <img src="images/User.png" alt="Account">
+          <span>Sign In</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="topbar">
+      <img src="images/Menu.png" alt="Menu" id="menuBtn" onclick="toggleMenu()">
+      <a href="home.html" style="text-decoration: none;">
+        <div class="logoContainer">
+          <img src="images/logo.png" alt="Logo" class="logo">
+          <h1>BOCCHI</h1>
+        </div>
+      </a>
+      <div class="search-wrapper">
+        <img class="search-icon" src="images/Search.png" alt="searchicon">
+        <input type="text" placeholder="Search...">
+      </div>
+      <a class="signinA" href="Signin.html">Sign In</a>
+    </div>
+  </header>
+
+  <div class="musicbar">
+    <div class="music-info">
+      <img src="songs/HomePage/Images/VIOLET.jpg" alt="Album Art">
+      <span class="songname">No Media</span>
+    </div>
+
+    <div class="music-controls">
+      <div class="buttons">
+        <button><img src="images/End.png" alt="prev"></button>
+        <button><img src="images/Play.png" alt="pause/play"></button>
+        <button><img src="images/Next.png" alt="next"></button>
+      </div>
+
+      <input type="range" class="progress-bar" min="0" max="100" value="0">
+    </div>
+
+    <div class="volume-control">
+      <button class="mute-btn">
+        <img src="images/Speaker.png" alt="Mute">
+      </button>
+      <input type="range" min="0" max="100" value="50">
+    </div>
+  </div>
+  <!--====================-->
+
+  <!--Main-->
+  <main>
+    <audio id="player"></audio>
+    <section class="categories">
+      <div class="section-header">
+        <h2>Categories</h2>
+      </div>
+      <div class="scrollContainer">
+        <div class="buttonColum">
+          <a href="#row1section"><button>Featured</button></a>
+          <a href="#row2section"><button>Popular Now</button></a>
+          <a href="#row3section"><button>New Realease</button></a>
+          <a href="#row4section"><button>Recommended for You</button></a>
+          <a href="#row5section"><button>Japanese Music</button></a>
+        </div>
+      </div>
+    </section>
+    
+    <section class="song-section" id="row1section"> <!--Featured-->
+      <div class="section-header">
+        <h2>Featured</h2>
+        <div class="scroll-buttons">
+          <button class="scrollLeft" onclick="scrollSongs('left',1)"><img src="images/Back.png" alt="back"></button>
+          <button class="scrollRight" onclick="scrollSongs('right',1)"><img src="images/Forward.png" alt="forward"></button>
+        </div>
+      </div>
+      <div class="scrollContainer" id="row1scroll">
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Bawat Piyesa.jpg">
+            <span class="song-title">Bawat Piyesa</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Dominga.jpg">
+            <span class="song-title">Dominga</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/ERE.jpg">
+            <span class="song-title">ERE</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Gangsta Baby.jpg">
+            <span class="song-title">Gangsta Baby</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Isip.jpg">
+            <span class="song-title">Isip</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Kanibalismo II.jpg">
+            <span class="song-title">Kanibalismo II</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/LUPAYPAY.jpg">
+            <span class="song-title">LUPAYPAY</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/NOKIA.jpg">
+            <span class="song-title">NOKIA</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Pag-ibig.jpg">
+            <span class="song-title">Pag-ibig</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/SOFTIE.jpg">
+            <span class="song-title">SOFTIE</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Walang Humpay.jpg">
+            <span class="song-title">Walang Humpay</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/ADDICT.jpg">
+            <span class="song-title">ADDICT</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/My Ordinary Life.jpg">
+            <span class="song-title">My Ordinary Life</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/blue.jpg">
+            <span class="song-title">blue</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Die With a Smile.jpg">
+            <span class="song-title">Die With a Smile</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Discord (Remix).jpg">
+            <span class="song-title">Discord (Remix)</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/September.jpg">
+            <span class="song-title">September</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/CUPHEAD RAP.jpg">
+            <span class="song-title">CUPHEAD RAP</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Toxic.jpg">
+            <span class="song-title">Toxic</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Drunk.jpg">
+            <span class="song-title">Drunk</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="song-section" id="row2section"> <!--Popular Now-->
+      <div class="section-header">
+        <h2>Popular Now</h2>
+        <div class="scroll-buttons">
+          <button class="scrollLeft" onclick="scrollSongs('left',2)"><img src="images/Back.png" alt="back"></button>
+          <button class="scrollRight" onclick="scrollSongs('right',2)"><img src="images/Forward.png" alt="forward"></button>
+        </div>
+      </div>
+      <div class="scrollContainer" id="row2scroll">
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/A Cruel Angel_s Thesis.jpg">
+            <span class="song-title">A Cruel Angel_s Thesis</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Bocca de la verita.jpg">
+            <span class="song-title">Bocca de la verita</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/envy baby.jpg">
+            <span class="song-title">envy baby</span>
+          </div>  
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/golden hour.jpg">
+            <span class="song-title">golden hour</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/KokoroToIuNanoFukakai.jpg">
+            <span class="song-title">KokoroToIuNanoFukakai</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Lagtrain.jpg">
+            <span class="song-title">Lagtrain</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Lost One_s Weeping.jpg">
+            <span class="song-title">Lost One_s Weeping</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/RuLe.jpg">
+            <span class="song-title">RuLe</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Shinitai-chan.jpg">
+            <span class="song-title">Shinitai-chan</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Writing on the Wall.jpg">
+            <span class="song-title">Writing on the Wall</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Bad Apple!!.jpg">
+            <span class="song-title">Bad Apple!!</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/bug.jpg">
+            <span class="song-title">bug</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Gira Gira.jpg">
+            <span class="song-title">Gira Gira</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Help me, ERINNNNNN!!.jpg">
+            <span class="song-title">Help me, ERINNNNNN!!</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/jackpot sad girl.jpg">
+            <span class="song-title">jackpot sad girl</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/KICK BACK.jpg">
+            <span class="song-title">KICK BACK</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/lower one_s eyes.jpg">
+            <span class="song-title">lower one_s eyes</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Mind Brand.jpg">
+            <span class="song-title">Mind Brand</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Odo.jpg">
+            <span class="song-title">Odo</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/phony.jpg">
+            <span class="song-title">phony</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Rolling Girl.jpg">
+            <span class="song-title">Rolling Girl</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Salamander.jpg">
+            <span class="song-title">Salamander</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Unholy.jpg">
+            <span class="song-title">Unholy</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Venom.jpg">
+            <span class="song-title">Venom</span>
+          </div>
+        </div><div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/WOZWALD.jpg">
+            <span class="song-title">WOZWALD</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/YELLOW.jpg">
+            <span class="song-title">YELLOW</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Young Girl A.jpg">
+            <span class="song-title">Young Girl A</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Bitter Choco Decoration.jpg">
+            <span class="song-title">Bitter Choco Decoration</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Bunny Girl.jpg">
+            <span class="song-title">Bunny Girl</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Fatal.jpg">
+            <span class="song-title">Fatal</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/I_m a Controversy.jpg">
+            <span class="song-title">I_m a Controversy</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/identity.jpg">
+            <span class="song-title">identity</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Light Switch.jpg">
+            <span class="song-title">Light Switch</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Luma.jpg">
+            <span class="song-title">Luma</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Morality Lesson.jpg">
+            <span class="song-title">Morality Lesson</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Omae Wa Mou.jpg">
+            <span class="song-title">Omae Wa Mou</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Polaroid Love.jpg">
+            <span class="song-title">Polaroid Love</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Readymade.jpg">
+            <span class="song-title">Readymade</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/unravel.jpg">
+            <span class="song-title">unravel</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/villain.jpg">
+            <span class="song-title">villain</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/HomePage/images/IRIS OUT.jpg">
+            <span class="song-title">IRIS OUT</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/HomePage/images/VIOLET.jpg">
+            <span class="song-title">VIOLET</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/HomePage/images/Ode to the Nameless Martyr.jpg">
+            <span class="song-title">Ode to the Nameless Martyr</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/HomePage/images/HELP!!.jpg">
+            <span class="song-title">HELP!!</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/HomePage/images/VIOLET.jpg">
+            <span class="song-title">VIOLET</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/HomePage/images/IRIS OUT.jpg">
+            <span class="song-title">IRIS OUT</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/HomePage/images/Ode to the Nameless Martyr.jpg">
+            <span class="song-title">Ode to the Nameless Martyr</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/HomePage/images/HELP!!.jpg">
+            <span class="song-title">HELP!!</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="song-section" id="row3section"> <!--New Realease-->
+      <div class="section-header">
+        <h2>New Release</h2>
+        <div class="scroll-buttons">
+          <button class="scrollLeft" onclick="scrollSongs('left',3)"><img src="images/Back.png" alt="back"></button>
+          <button class="scrollRight" onclick="scrollSongs('right',3)"><img src="images/Forward.png" alt="forward"></button>
+        </div>
+      </div>
+      <div class="scrollContainer" id="row3scroll">
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Bling Bang Bang Born.jpg">
+            <span class="song-title">Bling Bang Bang Born</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Overdose.jpg">
+            <span class="song-title">Overdose</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Under Kids.jpg">
+            <span class="song-title">Under Kids</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Shinunoga E-Wa.jpg">
+            <span class="song-title">Shinunoga E-Wa</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/NIGHT DANCER.jpg">
+            <span class="song-title">Night Dancer</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Being low as dirt.jpg">
+            <span class="song-title">Being low as dirt</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Loser Girl.jpg">
+            <span class="song-title">Loser Girl</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Loli God Requiem.jpg">
+            <span class="song-title">Loli God Requiem</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Renai Circulation.jpg">
+            <span class="song-title">Renai Circulation</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Electric Angel.jpg">
+            <span class="song-title">Electric Angel</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Compared Child.jpg">
+            <span class="song-title">Compared Child</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Racing into the Night.jpg">
+            <span class="song-title">Racing into the Night</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Rabbit Hole.jpg">
+            <span class="song-title">Rabbit Hole</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/IDOL.jpg">
+            <span class="song-title">IDOL</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/『TEMARI』.jpg">
+            <span class="song-title">『TEMARI』</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/I wanna be a girl.jpg">
+            <span class="song-title">I wanna be a girl</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Cherry Pop.jpg">
+            <span class="song-title">Cherry Pop</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Dämonisch.jpg">
+            <span class="song-title">Dämonisch</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Hide and Seek Alone.jpg">
+            <span class="song-title">Hide and Seek Alone</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Cinderella.jpg">
+            <span class="song-title">Cinderella</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Goodbye Declaration.jpg">
+            <span class="song-title">Goodbye Declaration</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/I GOT YOU!.jpg">
+            <span class="song-title">I GOT YOU!</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Kaibutsu.jpg">
+            <span class="song-title">Kaibutsu</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Love Attribute.jpg">
+            <span class="song-title">Love Attribute</span>
+          </div>
+        </div><div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Proof Geometric.jpg">
+            <span class="song-title">Proof Geometric</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Turing Love.jpg">
+            <span class="song-title">Turning Love</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Usseewa.jpg">
+            <span class="song-title">Usseewa</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Zaako.jpg">
+            <span class="song-title">Zaako</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/BRAIN.jpg">
+            <span class="song-title">BRAIN</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/God-ish.jpg">
+            <span class="song-title">God-ish</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/MoeChakkaFire.jpg">
+            <span class="song-title">MoeChakkaFire</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/The Purge March.jpg">
+            <span class="song-title">The Purge March</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/drop pop candy.jpg">
+            <span class="song-title">drop pop candy</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/propose.jpg">
+            <span class="song-title">propose</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Mesmerizer.jpg">
+            <span class="song-title">Mesmerizer</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/If There Was An Endpoint.jpg">
+            <span class="song-title">If There Was An Endpoint</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Kawaikute Gomen.jpg">
+            <span class="song-title">Kawaikute Gomen</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/IRIS OUT.jpg">
+            <span class="song-title">IRIS OUT</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Odochina.jpg">
+            <span class="song-title">Odochina</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/HELP!!.jpg">
+            <span class="song-title">HELP!!</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Trapped in the Past.jpg">
+            <span class="song-title">Trapped in the Past</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/MKDR.jpg">
+            <span class="song-title">MKDR</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Monitoring.jpg">
+            <span class="song-title">Monitoring</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Retry Now.jpg">
+            <span class="song-title">Retry Now</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/VIOLET.jpg">
+            <span class="song-title">VIOLET</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Tetoris.jpg">
+            <span class="song-title">Tetoris</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/PPPP.jpg">
+            <span class="song-title">PPPP</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Tententengoku Jigokukoku.jpg">
+            <span class="song-title">Tententengoku Jigokukoku</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="song-section" id="row4section"> <!--Reccomended for You-->
+      <div class="section-header">
+        <h2>Recommended for You</h2>
+        <div class="scroll-buttons">
+          <button class="scrollLeft" onclick="scrollSongs('left',4)"><img src="images/Back.png" alt="back"></button>
+          <button class="scrollRight" onclick="scrollSongs('right',4)"><img src="images/Forward.png" alt="forward"></button>
+        </div>
+      </div>
+      <div class="scrollContainer"  id="row4scroll">
+        <div class="song-item">
+            <img src="songs/ExplorePage/images/September.jpg">
+            <span class="song-title">September</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/CUPHEAD RAP.jpg">
+            <span class="song-title">CUPHEAD RAP</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Toxic.jpg">
+            <span class="song-title">Toxic</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Drunk.jpg">
+            <span class="song-title">Drunk</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Bawat Piyesa.jpg">
+            <span class="song-title">Bawat Piyesa</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Dominga.jpg">
+            <span class="song-title">Dominga</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/ERE.jpg">
+            <span class="song-title">ERE</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Bitter Choco Decoration.jpg">
+            <span class="song-title">Bitter Choco Decoration</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Bunny Girl.jpg">
+            <span class="song-title">Bunny Girl</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Fatal.jpg">
+            <span class="song-title">Fatal</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/I_m a Controversy.jpg">
+            <span class="song-title">I_m a Controversy</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/identity.jpg">
+            <span class="song-title">identity</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="song-section" id="row5section"> <!--Japanese Music-->
+      <div class="section-header">
+        <h2>Japanese Music</h2>
+        <div class="scroll-buttons">
+          <button class="scrollLeft" onclick="scrollSongs('left',5)"><img src="images/Back.png" alt="back"></button>
+          <button class="scrollRight" onclick="scrollSongs('right',5)"><img src="images/Forward.png" alt="forward"></button>
+        </div>
+      </div>
+      <div class="scrollContainer" id="row5scroll">
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Polaroid Love.jpg">
+            <span class="song-title">Polaroid Love</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Readymade.jpg">
+            <span class="song-title">Readymade</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/unravel.jpg">
+            <span class="song-title">unravel</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/villain.jpg">
+            <span class="song-title">villain</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Goodbye Declaration.jpg">
+            <span class="song-title">Goodbye Declaration</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/I GOT YOU!.jpg">
+            <span class="song-title">I GOT YOU!</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Kaibutsu.jpg">
+            <span class="song-title">Kaibutsu</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Love Attribute.jpg">
+            <span class="song-title">Love Attribute</span>
+          </div>
+        </div><div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Proof Geometric.jpg">
+            <span class="song-title">Proof Geometric</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Turing Love.jpg">
+            <span class="song-title">Turning Love</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Usseewa.jpg">
+            <span class="song-title">Usseewa</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Zaako.jpg">
+            <span class="song-title">Zaako</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Shinitai-chan.jpg">
+            <span class="song-title">Shinitai-chan</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Writing on the Wall.jpg">
+            <span class="song-title">Writing on the Wall</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Bad Apple!!.jpg">
+            <span class="song-title">Bad Apple!!</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/bug.jpg">
+            <span class="song-title">bug</span>
+          </div>
+        </div>
+        <div class="songColumn">
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Trapped in the Past.jpg">
+            <span class="song-title">Trapped in the Past</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/MKDR.jpg">
+            <span class="song-title">MKDR</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Monitoring.jpg">
+            <span class="song-title">Monitoring</span>
+          </div>
+          <div class="song-item">
+            <img src="songs/ExplorePage/images/Retry Now.jpg">
+            <span class="song-title">Retry Now</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--====================-->
+
+  <script src="JavaScript/GeneralScript.js"></script>
+  <script src="JavaScript/explore.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <title>BOCCHI | Home</title>
+    <link rel="stylesheet" href="Css/signup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign up</h1>
+
+        <input type="email" id="email" placeholder="Email"><br>
+        <input type="text" id="name" placeholder="Username"><br>
+        <input type="password" id="password" placeholder="Password"><br>
+        <input type="password" id="cpassword" placeholder="Confirm Password"><br>
+        <input type="text" id="date" placeholder="Date of Birth" onclick="change()"><br>
+
+        <div class="ButtonDiv">
+            <button type="button" id="submitB" onclick="validateForm()">Create Account</button>
+            <button type="button" id="backB" onclick="window.location.href='home.html'">Go Back</button>
+        </div>
+
+        <p>Already have an account? <a href="signin.html">Sign In</a></p>
+    </div>
+
+    <script>
+        function validateForm() {
+            const email = document.getElementById('email').value.trim();
+            const name = document.getElementById('name').value.trim();
+            const password = document.getElementById('password').value;
+            const cpassword = document.getElementById('cpassword').value;
+            const date = document.getElementById('date').value;
+
+            if (email === "") {
+                alert("Please Enter your Email.");
+                return;
+            }
+            if (name === "") {
+                alert("Please Enter your Username.");
+                return;
+            }
+            if (password === "") {
+                alert("Please Enter your Password.");
+                return;
+            }
+            if (cpassword === "") {
+                alert("Please Confirm your Password.");
+                return;
+            }
+            if (cpassword !== password) {
+                alert("Password does not match.");
+                return;
+            }
+            if (date === "") {
+                alert("Please Enter your Date of Birth.");
+                return;
+            }
+
+            if (confirm("Are you sure you want to submit?")) {
+                alert("Successfully Submitted!");
+                window.location.href = "signin.html";
+            }
+        }
+
+        function change() {
+            document.getElementById("date").type = "date";
+        }
+    </script>
+</body>
+</html>

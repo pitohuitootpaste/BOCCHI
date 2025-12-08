@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <title>BOCCHI | Home</title>
+    <link rel="stylesheet" href="Css/signin.css">
+</head>
+<body>
+    <form>
+        <div class="container">
+            <h1>Sign In</h1>
+            <input type="text" id="name" name="name" placeholder="Username"><br>
+            <input type="password" id="password" name="password" placeholder="Password"><br>
+            <div class="ButtonDiv">
+                <button type="button" id="submitB" onclick="validateForm()">Sign in</button>
+                <a href="home.html"><button type="button" id="backB">Go Back</button></a>
+            </div>
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+    </form>
+    <script>
+        function validateForm() {
+            const username = document.getElementById('name').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if (username === "") {
+                alert("Please enter your username");
+                return;
+            }
+
+            if (password === "") {
+                alert("Please enter your password");
+                return;
+            }
+
+            let choice = confirm("Are you sure you want to submit?");
+            if (choice) {
+                alert("Successfully Submitted!");
+                window.location.href = "home.html";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<head>
+  <title>BOCCHI | Home</title>
+  <link rel="stylesheet" href="Css/GeneralStyle.css">
+  <link rel="stylesheet" href="Css/library.css">
+</head>
+<body>
+  <!--General Elements-->
+  <nav id="sideNav">
+    <ul id="ulSidenav">
+      <li>
+        <a href="home.html">
+          <img src="images/Home.png" alt="Home">
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="explorer.html">
+          <img src="images/Explore.png" alt="Explore">
+          <span>Explore</span>
+        </a>
+      </li>
+      <li>
+        <a href="library.html" style="background-color: rgba(255, 255, 255, 0.15)">
+          <img src="images/Library.png" alt="Library">
+          <span>Library</span>
+        </a>
+      </li>
+      <hr id="sidenavLine" style="width: 67%; margin-top: 25px;">
+      <li>
+        <a href="Signin.html">
+          <img src="images/User.png" alt="Account">
+          <span>Sign In</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="topbar">
+      <img src="images/Menu.png" alt="Menu" id="menuBtn" onclick="toggleMenu()">
+      <a href="home.html" style="text-decoration: none;">
+        <div class="logoContainer">
+          <img src="images/logo.png" alt="Logo" class="logo">
+          <h1>BOCCHI</h1>
+        </div>
+      </a>
+      <div class="search-wrapper">
+        <img class="search-icon" src="images/Search.png" alt="searchicon">
+        <input type="text" placeholder="Search...">
+      </div>
+      <a class="signinA" href="Signin.html">Sign In</a>
+    </div>
+  </header>
+
+  <div class="musicbar">
+    <div class="music-info">
+      <img src="images/NoMedia.png" alt="Album Art">
+      <span class="songname">No Media</span>
+    </div>
+
+    <div class="music-controls">
+      <div class="buttons">
+        <button><img src="images/End.png" alt="prev"></button>
+        <button><img src="images/Play.png" alt="pause/play"></button>
+        <button><img src="images/Next.png" alt="next"></button>
+      </div>
+
+      <input type="range" class="progress-bar" min="0" max="100" value="0">
+    </div>
+
+    <div class="volume-control">
+      <button class="mute-btn">
+        <img src="images/Speaker.png" alt="Mute">
+      </button>
+      <input type="range" min="0" max="100" value="50">
+    </div>
+  </div>
+  <!--====================-->
+
+  <!--Main-->
+  <main>
+    <section class="playlist_section" id="row1section">
+      <div class="section-header">
+        <h2>Playlist</h2>
+        <div class="scroll-buttons">
+          <button class="scrollLeft" onclick="scrollSongs('left',1)"><img src="images/Back.png" alt="back"></button>
+          <button class="scrollRight" onclick="scrollSongs('right',1)"><img src="images/Forward.png" alt="forward"></button>
+        </div>
+      </div>
+      <div class="scrollContainer"  id="row1scroll">
+        <div class="playlist_column">
+          <div class="playlist-item">
+            <a href="songs/LibraryPage/codes/html/playlist/Favorite.html">
+              <img src="songs\LibraryPage\songs/playlist/Favorite/Favorite.png">
+              <span class="playlist-title">Favorite</span>
+            </a>
+          </div>
+          <div class="playlist-item">
+            <a href="songs/LibraryPage/codes/html/playlist/KjellList.html">
+              <img src="songs\LibraryPage\songs/playlist/Kjell Playlist/profile.png">
+              <span class="playlist-title">Kjell's Playlist</span>
+            </a>
+          </div>
+          <div class="playlist-item">
+            <a href="songs/LibraryPage/codes/html/playlist/RaleyList.html">
+              <img src="songs\LibraryPage\songs/playlist/Raley Playlist/profile.jpg">
+              <span class="playlist-title">Raley's Playlist</span>
+            </a>
+          </div>
+          <div class="playlist-item">
+            <a href="songs/LibraryPage/codes/html/playlist/LenardList.html">
+              <img src="songs\LibraryPage\songs/playlist/Lenard Playlist/profile.jpg">
+              <span class="playlist-title">Lenard's Playlist</span>
+            </a>
+          </div>
+          <div class="playlist-item">
+            <a href="songs/LibraryPage/codes/html/playlist/LouList.html">
+              <img src="songs\LibraryPage\songs/playlist/Lou Playlist/profile.png">
+              <span class="playlist-title">Lou's Playlist</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="artist_section" id="row2section">
+      <div class="section-header">
+        <h2>Artist</h2>
+        <div class="scroll-buttons">
+          <button class="scrollLeft" onclick="scrollSongs('left',2)"><img src="images/Back.png" alt="back"></button>
+          <button class="scrollRight" onclick="scrollSongs('right',2)"><img src="images/Forward.png" alt="forward"></button>
+        </div>
+      </div>
+      <div class="scrollContainer"  id="row2scroll">
+        <div class="artist_column">
+          <div class="artist-item">
+            <a href="songs/LibraryPage/codes/html/artist/ツユ.html">
+              <img src="songs\LibraryPage\songs\artist\ツユ\ツユ.jpg">
+              <span class="artist-title">ツユ</span>
+            </a>
+          </div>
+          <div class="artist-item">
+            <a href="songs/LibraryPage/codes/html/artist/Will Stetson.html">
+              <img src="songs\LibraryPage\songs\artist/Will Stetson/Will Stetson.jpg">
+              <span class="artist-title">Will Stetson</span>
+            </a>
+          </div>
+          <div class="artist-item">
+            <a href="songs/LibraryPage/codes/html/artist/Hatsune Miku.html">
+              <img src="songs\LibraryPage\songs\artist/Hatsune Miku/Hatsune Miku.jpg">
+              <span class="artist-title">Hatsune Miku</span>
+            </a>
+          </div>
+          <div class="artist-item">
+            <a href="songs/LibraryPage/codes/html/artist/JubyPhonic.html">
+              <img src="songs\LibraryPage\songs\artist/JubyPhonic/JubyPhonic.jpg">
+              <span class="artist-title">JubyPhonic</span>
+            </a>
+          </div>
+          <div class="artist-item">
+            <a href="songs/LibraryPage/codes/html/artist/Ado.html">
+              <img src="songs\LibraryPage\songs\artist/Ado/Ado.jpg">
+              <span class="artist-title">Ado</span>
+            </a>
+          </div>
+          <div class="artist-item">
+            <a href="songs/LibraryPage/codes/html/artist/Project Sekai.html">
+              <img src="songs\LibraryPage\songs\artist/Project Sekai/Project Sekai.jpg">
+              <span class="artist-title">Project Sekai</span>
+            </a>
+          </div>
+          <div class="artist-item">
+            <a href="songs/LibraryPage/codes/html/artist/Vivziepop.html">
+              <img src="songs\LibraryPage\songs\artist/Vivziepop/Vivziepop.jpg">
+              <span class="artist-title">Vivziepop</span>
+            </a>
+          </div>
+          <div class="artist-item">
+            <a href="songs/LibraryPage/codes/html/artist/rachie.html">
+              <img src="songs\LibraryPage\songs\artist/rachie/rachie.jpg">
+              <span class="artist-title">rachie</span>
+            </a>
+          </div>
+          <div class="artist-item">
+            <a href="songs/LibraryPage/codes/html/artist/The Living Tombstone.html">
+              <img src="songs\LibraryPage\songs\artist/The Living Tombstone/The Living Tombstone.jpg">
+              <span class="artist-title">The Living Tombstone</span>
+            </a>
+          </div>
+          <div class="artist-item">
+            <a href="songs/LibraryPage/codes/html/artist/OR3O.html">
+              <img src="songs\LibraryPage\songs\artist/OR3O/OR3O.jpg">
+              <span class="artist-title">OR3O</span>
+            </a>
+          </div>
+          <div class="artist-item">
+            <a href="songs/LibraryPage/codes/html/artist/Shayne Orok.html">
+              <img src="songs\LibraryPage\songs\artist/Shayne Orok/Shayne Orok.jpg">
+              <span class="artist-title">Shayne Orok</span>
+            </a>
+          </div>
+          <div class="artist-item">
+            <a href="songs/LibraryPage/codes/html/artist/Jamie Paige.html">
+              <img src="songs\LibraryPage\songs\artist/Jamie Paige/Jamie Paige.jpg">
+              <span class="artist-title">Jamie Paige</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--====================-->
+
+  <script src="JavaScript/GeneralScript.js"></script>
+  <script src="JavaScript/library.js"></script>
+</body>
+</html>
