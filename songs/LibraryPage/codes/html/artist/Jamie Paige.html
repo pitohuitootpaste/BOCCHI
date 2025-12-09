@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <head>
   <title>BOCCHI | Home</title>
-  <base href="BOCCHI/">
-  <link rel="stylesheet" href="Css/GeneralStyle.css">
-  <link rel="stylesheet" href="songs/LibraryPage/codes/generalLibraryStyle.css">
+  <link rel="stylesheet" href="../../../../../Css/GeneralStyle.css">
+  <link rel="stylesheet" href="../../../../../songs/LibraryPage/codes/generalLibraryStyle.css">
 </head>
 <body>
   <!--General Elements-->
   <nav id="sideNav">
     <ul id="ulSidenav">
       <li>
-        <a href="index.html">
-          <img src="images/Home.png" alt="Home">
+        <a href="../../../../../home.html">
+          <img src="../../../../../images/Home.png" alt="Home">
           <span>Home</span>
         </a>
       </li>
       <li>
-        <a href="explorer.html">
-          <img src="images/Explore.png" alt="Explore">
+        <a href="../../../../../explorer.html">
+          <img src="../../../../../images/Explore.png" alt="Explore">
           <span>Explore</span>
         </a>
       </li>
       <li>
-        <a href="library.html" style="background-color: rgba(255, 255, 255, 0.15)">
-          <img src="images/Library.png" alt="Library">
+        <a href="../../../../../library.html" style="background-color: rgba(255, 255, 255, 0.15)">
+          <img src="../../../../../images/Library.png" alt="Library">
           <span>Library</span>
         </a>
       </li>
       <hr id="sidenavLine" style="width: 67%; margin-top: 25px;">
       <li>
-        <a href="Signin.html">
-          <img src="images/User.png" alt="Account">
+        <a href="../../../../../Signin.html">
+          <img src="../../../../../images/User.png" alt="Account">
           <span>Sign In</span>
         </a>
       </li>
@@ -39,32 +38,32 @@
 
   <header>
     <div class="topbar">
-      <img src="images/Menu.png" alt="Menu" id="menuBtn" onclick="toggleMenu()">
-      <a href="index.html" style="text-decoration: none;">
+      <img src="../../../../../images/Menu.png" alt="Menu" id="menuBtn" onclick="toggleMenu()">
+      <a href="../../../../../home.html" style="text-decoration: none;">
         <div class="logoContainer">
-          <img src="images/logo.png" alt="Logo" class="logo">
+          <img src="../../../../../images/logo.png" alt="Logo" class="logo">
           <h1>BOCCHI</h1>
         </div>
       </a>
       <div class="search-wrapper">
-        <img class="search-icon" src="images/Search.png" alt="searchicon">
+        <img class="search-icon" src="../../../../../images/Search.png" alt="searchicon">
         <input type="text" placeholder="Search...">
       </div>
-      <a class="signinA" href="Signin.html">Sign In</a>
+      <a class="signinA" href="../../../../../Signin.html">Sign In</a>
     </div>
   </header>
 
   <div class="musicbar">
     <div class="music-info">
-      <img src="images/NoMedia.png" alt="Album Art">
+      <img src="../../../../../images/NoMedia.png" alt="Album Art">
       <span class="songname">No Media</span>
     </div>
 
     <div class="music-controls">
       <div class="buttons">
-        <button><img src="images/End.png" alt="prev"></button>
-        <button><img src="images/Play.png" alt="pause/play"></button>
-        <button><img src="images/Next.png" alt="next"></button>
+        <button><img src="../../../../../images/End.png" alt="prev"></button>
+        <button><img src="../../../../../images/Play.png" alt="pause/play"></button>
+        <button><img src="../../../../../images/Next.png" alt="next"></button>
       </div>
 
       <input type="range" class="progress-bar" min="0" max="100" value="0">
@@ -72,7 +71,7 @@
 
     <div class="volume-control">
       <button class="mute-btn">
-        <img src="images/Speaker.png" alt="Mute">
+        <img src="../../../../../images/Speaker.png" alt="Mute">
       </button>
       <input type="range" min="0" max="100" value="50">
     </div>
@@ -91,7 +90,7 @@
             </div>
 
             <button class="playall-btn">
-                <img src="images/Play.png" alt="">
+                <img src="../../../../../images/Play.png" alt="">
                 Play All
             </button>
         </div>
@@ -99,7 +98,7 @@
         <hr class="divider">
         <div class="musiclist_column">
             <div class="song-row">
-                <img src="songs/LibraryPage/songs/artist/Jamie Paige/BIRDBRAIN.jpg" alt="">
+                <img src="../../../../../songs/LibraryPage/songs/artist/Jamie Paige/BIRDBRAIN.jpg" alt="">
                 <div class="song-details">
                   <span class="song-title">BIRDBRAIN</span>
                   <span class="song-artist">Jamie Paige</span>
@@ -107,7 +106,7 @@
                 </div>
             </div>
             <div class="song-row">
-                <img src="songs/LibraryPage/songs/artist/Jamie Paige/Machine Love.jpg" alt="">
+                <img src="../../../../../songs/LibraryPage/songs/artist/Jamie Paige/Machine Love.jpg" alt="">
                 <div class="song-details">
                   <span class="song-title">Machine Love</span>
                   <span class="song-artist">Jamie Paige</span>
@@ -120,7 +119,7 @@
 
   <!--====================-->
 
-  <script src="JavaScript/GeneralScript.js"></script>
-  <script src="songs/LibraryPage/codes/generalLibraryJS.js"></script>
+  <script src="../../../../../JavaScript/GeneralScript.js"></script>
+  <script src="../../../../../songs/LibraryPage/codes/generalLibraryJS.js"></script>
 </body>
 </html>

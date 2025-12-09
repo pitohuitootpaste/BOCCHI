@@ -42,10 +42,10 @@ function playSong(index) {
   currOthers.forEach((sp) => (sp.style.color = "#7c1443ff"));
 
   // Update audio source
-  audio.src =`../../../../songs/LibraryPage/songs/allsongs/${title}.mp3`;
+  audio.src = `../../../../../songs/LibraryPage/songs/allsongs/${title}.mp3`;
   audio.play();
   isPlaying = true;
-  playBtn.src = "../../../../images/Pause.png";
+  playBtn.src = "../../../../../images/Pause.png";
   songImg.src = item.querySelector("img").src;
   songName.textContent = title;
 }
@@ -56,10 +56,10 @@ function togglePlay() {
 
   if (isPlaying) {
     audio.pause();
-    playBtn.src = "../../../../images/Play.png";
+    playBtn.src = "../../../../../images/Play.png";
   } else {
     audio.play();
-    playBtn.src = "../../../../images/Pause.png";
+    playBtn.src = "../../../../../images/Pause.png";
   }
   isPlaying = !isPlaying;
 }
@@ -113,7 +113,7 @@ muteBtn.addEventListener("click", () => {
   isMuted = !isMuted;
   audio.muted = isMuted;
 
-  muteBtn.src = isMuted ? "../../../../images/Mute.png" : "../../../../images/Speaker.png";
+  muteBtn.src = isMuted ? "../../../../../images/Mute.png" : "../../../../../images/Speaker.png";
 });
 
 // Progress bar update
